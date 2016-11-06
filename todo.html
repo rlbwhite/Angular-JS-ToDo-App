@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<!--
+*Author: Robert White
+*Assignment: WI2.0 Mobile Development, Digital Skills Academy
+Student ID: ???
+Date: 2016/05/02
+Ref: Ref: Jon Duckett HTML & CSS , Jon Duckett Javascript & jQuery , W3Schools
+-->
+  <meta charset="utf-8">
+  <script src="js/angular.min.js"></script>
+  <script src="js/todo.js"></script>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <title>AngularJS To Do List App by Robert White</title>
+</head>
+<!-- 
+Local storage can be implement using the new HTML5 , 
+window.localStorage - stores data with no expiration date
+window.sessionStorage - stores data for one session (data is lost when the browser tab is closed)
+-->
+<body ng-app="todoApp">
+  <div class="container" ng-controller="TodoListController as todoList">
+    <h3>AngularJS List App</h3>
+      <h4>You've got <span class="highlighted">{{getTotal()}}</span> items on your list</h4>
+        <form ng-submit="addTodo()">
+          <input type="text" ng-model="todoList.Title"  size="30" placeholder="Enter Item Here" class="info" autocomplete="off" autofocus="on" required ng-model-instant><br>
+        <P>Select Priority Level</P>
+        <select ng-model="todoList.priority">
+           <option value="*LOW Priority">Low</option>
+           <option value="*MEDIUM Priority">Medium</option>
+           <option value="*HIGH Priority">High</option>
+        </select><br><br>
+          <input class="btn-primary" type="submit" value="Click Here to Add to List">
+        </form>
+        <div class="list">
+          <ul>
+            <li ng-repeat="todo in todoList" class="text">
+                <input type="checkbox" ng-model="todo.done" ng-model-instant><span class="title-{{todo.done}}">  {{todo.title}} </span><span class="priority">{{todo.priority}}  </span>
+                <button ng-click="removeItem($index)" type="submit" class="glyphicon glyphicon-remove"></button>
+            </li>
+          </ul>
+        </div>
+    </div> 
+  </body>
+</html>

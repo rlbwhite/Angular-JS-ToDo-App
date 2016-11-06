@@ -1,0 +1,66 @@
+/*
+*Author: Robert White
+*Assignment: WI2.0 Mobile Development, Digital Skills Academy
+Student ID: ???
+Date: 2016/05/02
+Ref: Ref: Jon Duckett HTML & CSS , Jon Duckett Javascript & jQuery
+*/
+.text {
+	list-style-type: none;
+}
+.container {
+	background-color: #efefef;
+	width: 500px;
+	padding: 10px;
+	border:1px solid black;
+	border-radius: 1em;
+}
+.highlighted {
+	font-weight: bold;
+	text-decoration: underline;
+	font-size: 1em;
+	color: red;
+}
+.btn-primary {
+	width: 100%;
+}
+input.info {
+	width: 100%;
+	padding: 3px;
+	margin: 2px;
+}
+.title-true {
+  text-decoration: line-through;
+  font-size: 1em;
+}
+.title-false {
+  font-size: 1em;
+  font-weight: bold;
+  text-decoration: none;
+  line-height: 2em;
+  color: black;
+}
+.title-false:hover {
+  font-size: 1em;
+  font-weight: bold;
+  text-decoration: none;
+  line-height: 2em;
+  color: black;
+}
+.clear {
+	width: 100%;
+	border-radius: .25em;
+	background-color: #aafeaf;
+}
+.list {
+	background-color: #fff;
+	border: 1px solid green;
+	border-radius: .25em;
+}
+.glyphicon-remove {
+	color: red;
+	font-size: .7em;
+}
+.priority {
+	color: red;
+}
